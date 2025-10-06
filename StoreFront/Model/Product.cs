@@ -9,11 +9,11 @@ namespace StoreFront.Model
         public int StockCount { get; }
         public Product(string name, string description, decimal price, int ageRating, int stockCount)
         {
-            name = Name;
-            description = Description;
-            price = Price;
-            ageRating = AgeRating;
-            stockCount = StockCount;
+            Name = name;
+            Description = description;
+            Price = price;
+            AgeRating = ageRating;
+            StockCount = stockCount;
         }
     }
 }
