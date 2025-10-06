@@ -9,6 +9,7 @@ namespace StoreFront
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private static Dictionary<int, Product> _products = new() { { 1, new("Xbox","a nice toy for men",550,18,1) } };
         // GET: api/<ProductController>
         [HttpGet]
         public IEnumerable<string> Get()
