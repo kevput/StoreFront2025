@@ -22,9 +22,12 @@ namespace StoreFront
 		}
 
 		[HttpGet("detail")]
-		public Customer GetCustomerById([FromQuery]int id)
+		public Customer GetCustomerById([FromQuery] int id)
 		{
 			return _customers[id];
 		}
-	}
+
+        [HttpDelete()]
+        public void DeleteCustomerById(int id) => _customers.Remove(id);
+    }
 }
