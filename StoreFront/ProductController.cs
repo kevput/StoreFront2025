@@ -12,9 +12,9 @@ namespace StoreFront
         private static Dictionary<int, Product> _products = new() { { 1, new("Xbox","a nice toy for men",550,18,1) } };
         // GET: api/<ProductController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Product>GetProducts()
         {
-            return new string[] { "value1", "value2" };
+            return _products.Values.ToList();
         }
 
         // GET api/<ProductController>/5
