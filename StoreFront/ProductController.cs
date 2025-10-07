@@ -17,8 +17,16 @@ namespace StoreFront
         {
             return _products.Values.ToList();
         }
+        [HttpGet("detail")]
+        public Product GetProductById([FromQuery] int id)
+        {
+            return _products[id];
+        }
 
+        [HttpPost]
+        public void UpdateProductById(int id, [FromBody] Product product) => _products[id] = product;
 
-
+        [HttpDelete()]
+        public void DeleteProductById(int id) => _products.Remove(id);
     }
 }
