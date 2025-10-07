@@ -29,5 +29,8 @@ namespace StoreFront
 
         [HttpDelete()]
         public void DeleteCustomerById(int id) => _customers.Remove(id);
+
+		[HttpPost()]
+		public void UpdateCustomerById(int id, [FromBody] Customer customer) => _customers[id] = customer;
     }
 }
